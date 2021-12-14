@@ -66,11 +66,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/fakeUser", async (req, res) => {
-  const user = new User({ email: "somthing@email.com", username: "something" });
-  const newUser = await User.register(user, "some");
-  res.send(newUser);
-});
+// app.get("/fakeUser", async (req, res) => {
+//   const user = new User({ email: "somthing@email.com", username: "something" });
+//   const newUser = await User.register(user, "some");
+//   res.send(newUser);
+// });
 
 // routes
 app.use("/", userRoutes);
@@ -87,7 +87,7 @@ app.all("*", (req, res, next) => {
 
 app.use((err, req, res, next) => {
   const { statusCode = 500 } = err;
-  //   if (!err.mesage) err.message = "Oh No, Somethin Went Wrong";
+  // if (!err.mesage) err.message = "Oh No, Somethin Went Wrong";
   res.status(statusCode).render("error", { err });
 });
 
