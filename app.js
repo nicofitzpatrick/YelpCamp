@@ -99,8 +99,9 @@ const styleSrcUrls = [
 ];
 const connectSrcUrls = [
   "https://api.mapbox.com/",
-  "https://a.tiles.mapbox.com/",
-  "https://b.tiles.mapbox.com/",
+  // "https://a.tiles.mapbox.com/",
+  // "https://b.tiles.mapbox.com/",
+  "https://*.tiles.mapbox.com",
   "https://events.mapbox.com/",
   "https://res.cloudinary.com/dsqqbwbxi/",
 ];
